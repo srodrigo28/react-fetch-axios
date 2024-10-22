@@ -1,0 +1,5 @@
+{
+    "products" : [
+        { "id" : 1, "name": "tv smart lg", "quantity": 10, "price": 2000 }
+    ]
+}
