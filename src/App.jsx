@@ -5,9 +5,12 @@ function App() {
   const url = "http://localhost:3000/products"
   const [ product, setProduct ] = useState([])
 
-  fetch(url, {})
-  .then( (res) => res.json() )
-  .then( (data) => { setProduct(data) } )
+  fetch(url, {
+    method: "GET",
+    headers: { "Content-Type": "Application/Json" }
+  })
+  .then( res => res.json() )
+  .then( data => { setProduct(data) } )
   return (
    <div>
       {
