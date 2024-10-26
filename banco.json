@@ -3,5 +3,8 @@
         { "id" : 1, "name": "tv smart lg", "quantity": 10, "price": 2000 },
         { "id" : 2, "name": "play station 4", "quantity": 20, "price": 2500 },
         { "id" : 3, "name": "play station 5", "quantity": 15, "price": 4500 }
+    ],
+    "transaction": [
+        
     ]
 }
