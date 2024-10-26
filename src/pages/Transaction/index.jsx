@@ -2,11 +2,23 @@ import "./Transaction.css"
 // import formatMoeda from "./../../utils/formatMoeda"
 import formatDate from "./../../utils/formatDate"
 import CountUp from 'react-countup';
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { NewTranction } from './../NewTranction';
+
 
 export function Transaction(){
     const [open, setOpen] = useState(false)
+    const [dataLista, setDataLista] = useState([])
+    const url = "http://localhost:3000/transaction"
+
+    useEffect( () => {
+        fetch(url, {
+            method : "GET",
+            headers: { 'Content-Type': 'application/json' },
+        })
+        .then((res) => { return res.json() })
+        .then((data) => { setDataLista(data); })
+      }, [dataLista]);
     
     return(
         <div>
@@ -76,41 +88,20 @@ export function Transaction(){
                 </button>
             </section>
 
-            <section className="history">
-                <div className="history-item credit">
-                    <div> Desenvolvimento de site 1</div>
-                    <div className="history-item-money"> R$ 1.200,00 </div>
-                    <div> Venda </div>
-                    <div> { formatDate("2024-3-9") } </div>
-                </div>
-            </section>
-
-            <section className="history">
-                <div className="history-item credit">
-                    <div> Desenvolvimento de site 2</div>
-                    <div  className="history-item-money"> R$ 1.500,00 </div>
-                    <div> Venda </div>
-                    <div> 23/10/2024 </div>
-                </div>
-            </section>
-
-            <section className="history">
-                <div className="history-item credit">
-                    <div> Desenvolvimento de site 3</div>
-                    <div className="history-item-money"> R$ 800,00 </div>
-                    <div> Venda </div>
-                    <div> 25/10/2024 </div>
-                </div>
-            </section>
-
-            <section className="history">
-                <div className="history-item debit">
-                    <div> Aluguel e outras despesas</div>
-                    <div className="history-item-money"> - R$ 2.200,00 </div>
-                    <div> Despesa </div>
-                    <div> 26/10/2024 </div>
-                </div>
-            </section>
+           <section className="history-conteinar">
+           {
+                dataLista.map( item => (
+                    <section className="history" key={item.id}>
+                        <div className="history-item credit">
+                            <div className="description"> { item.description } </div>
+                            <div className="category"> { item.category } </div>
+                            <div> { formatDate(item.data) } </div>
+                            <div  className="history-item-money"> { item.price } </div>
+                        </div>
+                    </section>
+                ))
+            }
+           </section>
             
             <footer>
                 <div className="footer-item">

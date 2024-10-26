@@ -87,7 +87,7 @@ form input, .select-input, .input{
     align-items: center;
     justify-content: center;
 }
-.btn-group button, .btn1{
+.btn-group button{
     width: 100%;
 
     padding: 15px;
@@ -114,7 +114,7 @@ form input, .select-input, .input{
  }
 
  .saida i{ 
-    color: red !important;
+    color: #fff !important;
     font-size: 1.8em;
     padding-right: 10px;
  }
@@ -128,8 +128,10 @@ form input, .select-input, .input{
     padding-right: 10px;
  }
  .active-entrada{
-    
     background-color: green !important;
+}
+.active-saida{
+    background-color: red !important;
 }
 #cadastrar{
     width: 100%;

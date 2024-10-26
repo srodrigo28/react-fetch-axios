@@ -1,13 +1,88 @@
 {
-    "products" : [
-        { "id" : 1, "name": "tv smart lg", "quantity": 10, "price": 2000 },
-        { "id" : 2, "name": "play station 4", "quantity": 20, "price": 2500 },
-        { "id" : 3, "name": "play station 5", "quantity": 15, "price": 4500 }
-    ],
-    "transaction": [
-        { "id": 1, "description": "Site desenvolvido 1", "valor": 1200, "data": "2024-10-10", "categoria": "credit"},
-        { "id": 2, "description": "Site desenvolvido 1", "valor": 1500, "data": "2024-10-11", "categoria": "credit"},
-        { "id": 3, "description": "Site desenvolvido 1", "valor": 1100, "data": "2024-10-12", "categoria": "credit"},
-        { "id": 4, "description": "Site desenvolvido 1", "valor": 2200, "data": "2024-10-13", "categoria": "debit"}
-    ]
+  "products": [
+    {
+      "id": "1",
+      "name": "tv smart lg",
+      "quantity": 10,
+      "price": 2000
+    },
+    {
+      "id": "2",
+      "name": "play station 4",
+      "quantity": 20,
+      "price": 2500
+    },
+    {
+      "id": "3",
+      "name": "play station 5",
+      "quantity": 15,
+      "price": 4500
+    }
+  ],
+  "transaction": [
+    {
+      "id": "33ee",
+      "description": "Pagar energia",
+      "price": "R$ 280,00",
+      "data": "2024-10-30",
+      "status": "vencer",
+      "category": "saida"
+    },
+    {
+      "id": "bc66",
+      "description": "Giovanni",
+      "price": "R$ 1.000,00",
+      "data": "2024-11-10",
+      "status": "receber",
+      "category": "entrada"
+    },
+    {
+      "id": "8353",
+      "description": "asdfasdf",
+      "price": "R$ 100,00",
+      "data": "2024-10-20",
+      "status": "pago",
+      "category": "entrada"
+    },
+    {
+      "id": "cfa9",
+      "description": "teste 2",
+      "price": "R$ 500,00",
+      "data": "2024-10-20",
+      "status": "pago",
+      "category": "saida"
+    },
+    {
+      "id": "6107",
+      "description": "teste 2",
+      "price": "R$ 5.000,00",
+      "data": "2024-10-10",
+      "status": "vencer",
+      "category": "entrada"
+    },
+    {
+      "id": "9ef9",
+      "description": "Energia mês 10",
+      "price": "R$ 259,00",
+      "data": "2024-10-20",
+      "status": "pago",
+      "category": "saida"
+    },
+    {
+      "id": "cc71",
+      "description": "Energia mês 10",
+      "price": "R$ 259,00",
+      "data": "2024-10-20",
+      "status": "pago",
+      "category": "entrada"
+    },
+    {
+      "id": "17b7",
+      "description": "Energia mês 10",
+      "price": "R$ 259,00",
+      "data": "2024-10-20",
+      "status": "pago",
+      "category": "saida"
+    }
+  ]
 }

@@ -14,14 +14,16 @@ export function NewTranction({ isOpen, setOpen }) {
     const [categorySaidas, setCategorySaida] = useState("")
     const [category, setCategory] = useState("")
 
+    const [dataLista, setDataLista] = useState([])
+
     const inputRef = useNumberFormat({
         locales: 'pt',
         format:"currency",
         currency:"BRL",
         maximumFractionDigits: 2,
-      });
+    });
 
-      const handleCategory = (opcao) => {
+    const handleCategory = (opcao) => {
             if( opcao == "entrada" ){
                 setCategoryEntrada("active-entrada")
                 setCategorySaida("")
@@ -38,24 +40,41 @@ export function NewTranction({ isOpen, setOpen }) {
                 // toast("hello " + opcao)
 
             }
-      }
+    }
 
-      const handleValidation = () => {
-        if( description =="" || price == "" || status == "" || inputDate == ""){
-            toast("Por favor preencher todos os campos!")
-            // console.log( '\n' + description + '\n', price  + '\n', status  + '\n', inputDate  + '\n', category )
+    const handleValidation = () => {
+        if( description == "" ){
+            toast("Por favor preencher a Descrição! ")
+            return false
+        } else if( price == "" ){
+            toast(" Preencher o valor! ")
+            return false
+        } else if(status == "" ){
+            toast(" Preencher o status! ")
+            return false
+        } else if( inputDate == "" ){
+            toast(" Preencher a data! ")
             return false
         }else{
-            console.log( '\n', description + '\n', price  + '\n', status  + '\n', inputDate  + '\n', category )
+            console.log(
+                '\n',
+                description + '\n', 
+                price  + '\n', 
+                status  + '\n', 
+                inputDate  + '\n', 
+                category
+            )
             handleInserir()
             setOpen(!isOpen)
         }
-      }
+    }
 
-      const handleInserir = () => {
+    const handleInserir = () => {
         fetch( url, {
             method : "POST",
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 
+                'Content-Type': 'application/json' 
+            },
             body: JSON.stringify({
                 description: description,
                 price: price,
@@ -65,8 +84,11 @@ export function NewTranction({ isOpen, setOpen }) {
               })
             })
             toast('Salvo com sucesso')
-      }
+    }
 
+  
+        
+    
     if (isOpen) {
         return (
             <div className="container">

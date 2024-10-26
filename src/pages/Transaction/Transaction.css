@@ -92,7 +92,8 @@ body{
     max-width: 1200px;
     margin: 0 auto;
 
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     gap: 10px;
     display: flex;
     flex-direction: row;
@@ -163,8 +164,14 @@ body{
     transition: .5s;
 }
 .history-item-money{
-    width: 200px;
+    width: 300px;
     text-align: right;
+}
+.description{
+    flex: 1;
+}
+.category{
+    width: 200px;
 }
 .credit{
     color: #22CC9A !important;
@@ -174,7 +181,13 @@ body{
     
     color: red !important;
 }
-
+.history-conteinar{
+    height: 52vh;
+    max-width: 1200px;
+    margin: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
 .history .history-item:hover{
     transform: scale(1.02);
     border: 3px solid #fff;
