@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+    <title>Cadastro</title>
+</head>
+<body>
+    <form>
+        <button id="fechar">X</button>
+
+        <h3>Nova transferência</h3>
+
+        <input type="text" placeholder="Descricao " id="descricao" />
+        <input type="text" placeholder="Preco " id="preco" />
+        <input type="text" placeholder="Categoria " id="categoria" />
+
+        <div class="btn-group">
+            <button id="entrada">
+                <i class="fa-regular fa-circle-up"></i>
+                Entrada
+            </button>
+
+            <button id="saida">
+                <i class="fa-regular fa-circle-down"></i>
+                Saida
+            </button>
+        </div>
+        <button id="cadastrar">Cadastrar</button>
+    </form>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        body{
+            background-color: #000;
+
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h3{
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+        }
+        #fechar{
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            color: #777;
+            background-color: transparent;
+            border: none;
+
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: .9s;
+        }
+        #fechar:hover{
+            color: red;
+            border: 1px solid red;
+            background-color: #000;
+            transform: rotate(180deg) scale(1.07); 
+        }
+        form{
+            position: relative;
+            padding: 20px;
+            width: 350px;
+            height: 380px;
+            border-radius: 10px;
+            background-color: #1d1d1d;
+
+            gap: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        form input{
+            padding: 15px;
+            border: none;
+            outline: none;
+            width: 100%;
+            color: #fff;
+            background-color: #000;
+            border-radius: 7px;
+        }
+        .btn-group{
+            gap: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-group button{
+            width: 100%;
+
+            padding: 10px;
+            border: none;
+            outline: none;
+            color: #fff;
+            background-color: #000;
+            border-radius: 7px;
+            transition: .9s;
+            opacity: .6;
+
+            gap: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-group button:hover{
+            cursor: pointer;
+            opacity: 1;
+        }
+        #entrada i{
+            font-size: 1.5em;
+            color: green;
+        }
+        #saida i{
+            font-size: 1.5em;
+            color: red;
+        }
+        #cadastrar{
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            color: #fff;
+            cursor: pointer;
+            background-color: green;
+            border-radius: 7px;
+            transition: .9s;
+            opacity: .8;
+        }
+        #cadastrar:hover{
+            opacity: 1;
+            color: #fff;
+            font-weight: 500;
+        }
+    </style>
+</body>
+</html>

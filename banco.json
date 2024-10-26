@@ -5,6 +5,9 @@
         { "id" : 3, "name": "play station 5", "quantity": 15, "price": 4500 }
     ],
     "transaction": [
-        
+        { "id": 1, "description": "Site desenvolvido 1", "valor": 1200, "data": "2024-10-10", "categoria": "credit"},
+        { "id": 2, "description": "Site desenvolvido 1", "valor": 1500, "data": "2024-10-11", "categoria": "credit"},
+        { "id": 3, "description": "Site desenvolvido 1", "valor": 1100, "data": "2024-10-12", "categoria": "credit"},
+        { "id": 4, "description": "Site desenvolvido 1", "valor": 2200, "data": "2024-10-13", "categoria": "debit"}
     ]
 }

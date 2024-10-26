@@ -40,7 +40,7 @@ body{
 }
 .header button:hover{
     transform: scale(1.03);
-    border: 3px solid #fff;
+    border: 3px solid #22CC9A;
 }
 .values{
     max-width: 1200px;
@@ -63,6 +63,13 @@ body{
     flex-direction: column;
     flex: 1;
     justify-content: space-between;
+}
+.values-item{
+    transition: .6s;
+    cursor: pointer;
+}
+.values-item:hover{
+    transform: scale(1.07);
 }
 .div-money{
     height: 30px;
@@ -98,6 +105,7 @@ body{
     border-radius: 10px;
     font-size: 20px;
     color: #fff;
+    border: 2px solid #015F43;
     background-color: black;
     transition: .5s;
 }
@@ -129,6 +137,7 @@ body{
     border: 3px solid #fff;
 
     transform: scale(1.05);
+    border: 3px solid #22CC9A;
 }
 .history{
     max-width: 1200px;
