@@ -10,8 +10,7 @@ export function NewTranction( { isOpen, setOpen } ) {
     const [price, setPrice] = useState("")
     const [status, setStatus] = useState("")
     const [inputDate, setInputDate] = useState("2024-10-25")
-    const [categoryEntrada, setCategoryEntrada] = useState("")
-    const [categorySaidas, setCategorySaida] = useState("")
+
     const [category, setCategory] = useState("")
 
     const inputRef = useNumberFormat({
@@ -20,25 +19,6 @@ export function NewTranction( { isOpen, setOpen } ) {
         currency:"BRL",
         maximumFractionDigits: 2,
     });
-
-    const handleCategory = (opcao) => {
-            if( opcao == "entrada" ){
-                setCategoryEntrada("active-entrada")
-                setCategorySaida("")
-                
-                setCategory("entrada")
-                // toast("hello " + opcao)
-                return false
-            }else if( opcao == "saida" ) {
-                setCategorySaida("active-saida")
-                setCategoryEntrada("")
-
-                setCategory("saida")
-                
-                // toast("hello " + opcao)
-
-            }
-    }
 
     const handleValidation = () => {
         if( description =="" || price == "" || status == "" || inputDate == ""){
@@ -92,17 +72,16 @@ export function NewTranction( { isOpen, setOpen } ) {
 
                         <div className="btn-group">
                             <button 
-                                className={`${categoryEntrada}  entrada`} 
-                                type="button" onClick={ () => handleCategory("entrada") }
-                                
+                                className={` ${ category === "entrada" ? "active-entrada" : "" }  entrada `} 
+                                type="button" onClick={ () => setCategory("entrada") }                                
                             >
                                 <i className="fa-regular fa-circle-up"></i>
                                 Entrada
                             </button>
 
                             <button 
-                                className={`${categorySaidas}  saida`} 
-                                type="button" onClick={ () => handleCategory("saida") }
+                                className={` ${ category === "saida" ? "active-saida" : ""  }  saida `} 
+                                type="button" onClick={ () => setCategory("saida") }
                             >
                                 <i className="fa-regular fa-circle-down"></i>
                                 Saida

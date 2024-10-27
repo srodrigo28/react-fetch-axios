@@ -83,6 +83,22 @@
       "data": "2024-10-20",
       "status": "pago",
       "category": "saida"
+    },
+    {
+      "id": "3de8",
+      "description": "Prestação Investidor",
+      "price": "R$ 5.000,00",
+      "data": "2024-10-03",
+      "status": "vencido",
+      "category": "saida"
+    },
+    {
+      "id": "e6d9",
+      "description": "Pagar casa",
+      "price": "R$ 4.500,00",
+      "data": "2024-10-31",
+      "status": "pago",
+      "category": "saida"
     }
   ]
 }
