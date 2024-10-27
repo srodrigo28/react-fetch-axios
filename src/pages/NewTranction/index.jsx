@@ -4,7 +4,7 @@ import "./NewTranction.css";
 import { useNumberFormat } from '@react-input/number-format';
 import { toast } from "react-toastify";
 
-export function NewTranction({ isOpen, setOpen }) {
+export function NewTranction( { isOpen, setOpen } ) {
     const url = "http://localhost:3000/transaction"
     const [description, setDescription] = useState("")
     const [price, setPrice] = useState("")
@@ -19,9 +19,9 @@ export function NewTranction({ isOpen, setOpen }) {
         format:"currency",
         currency:"BRL",
         maximumFractionDigits: 2,
-      });
+    });
 
-      const handleCategory = (opcao) => {
+    const handleCategory = (opcao) => {
             if( opcao == "entrada" ){
                 setCategoryEntrada("active-entrada")
                 setCategorySaida("")
@@ -38,9 +38,9 @@ export function NewTranction({ isOpen, setOpen }) {
                 // toast("hello " + opcao)
 
             }
-      }
+    }
 
-      const handleValidation = () => {
+    const handleValidation = () => {
         if( description =="" || price == "" || status == "" || inputDate == ""){
             toast("Por favor preencher todos os campos!")
             // console.log( '\n' + description + '\n', price  + '\n', status  + '\n', inputDate  + '\n', category )
@@ -50,9 +50,9 @@ export function NewTranction({ isOpen, setOpen }) {
             handleInserir()
             setOpen(!isOpen)
         }
-      }
+    }
 
-      const handleInserir = () => {
+    const handleInserir = () => {
         fetch( url, {
             method : "POST",
             headers: { 'Content-Type': 'application/json' },
@@ -65,7 +65,7 @@ export function NewTranction({ isOpen, setOpen }) {
               })
             })
             toast('Salvo com sucesso')
-      }
+    }
 
     if (isOpen) {
         return (
