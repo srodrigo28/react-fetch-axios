@@ -1,9 +1,9 @@
 import "./List3.css"
-import { Pagination } from "./../Pagination"
+import { Pagination } from "../Pagination"
 import { useQuery, keepPreviousData } from "@tanstack/react-query";
 import { useSearchParams } from 'react-router-dom'
 
-export function List3(){
+export function indexSketch(){
     const url = "http://localhost:3000/transaction";
 
     const [ searchParams, ] = useSearchParams();
@@ -13,8 +13,17 @@ export function List3(){
     const { data: tagsResponse, isLoading } = useQuery({
         queryKey: ['get-items', page],
         queryFn: async () => {
-            const response = await fetch( `http://localhost:3000/transaction/?_page=${page}&_per_page=3`)
+            // const response = await fetch( "http://localhost:3000/transaction/?_page=1&_per_page=2", { method: "GET"} )
+            //const response = await fetch( `${url+"/?_page=1&_per_page=3"}`, { method: "GET"} )
+            // const response = await fetch( `http://localhost:3000/transaction/?_page=${page}&_per_page=2`, { method: "GET"} )
+            
+            const response = await fetch( `http://localhost:3000/transaction/?_page=${page}&_per_page=3`, { method: "GET"} )
+            
             const data = await response.json()
+
+            // delay 2s
+            // await new Promise(resolve => setTimeout(resolve, 2000))
+            
             return data
         },
         placeholderData: keepPreviousData,
@@ -39,9 +48,11 @@ export function List3(){
                ))}
             </div>
 
-            { tagsResponse 
+            {
+                tagsResponse 
                 && 
-                <Pagination pages={tagsResponse.pages}
+                <Pagination 
+                    pages={tagsResponse.pages}
                     prev={tagsResponse.prev}
                     items={tagsResponse.items} 
                     next={tagsResponse.next}
