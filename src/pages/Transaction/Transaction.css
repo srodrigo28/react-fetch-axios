@@ -224,3 +224,12 @@ footer{
     border: 3px solid #fff;
     background-color:  #015F43;
 }
+
+/* SCROLL BAR */
+
+::-webkit-scrollbar{
+    width: 20px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #015F43;
+}
