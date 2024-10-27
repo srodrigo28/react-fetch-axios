@@ -20,6 +20,9 @@ export function List3(){
             const response = await fetch( `http://localhost:3000/transaction/?_page=${page}&_per_page=3`, { method: "GET"} )
             
             const data = await response.json()
+
+            // delay 2s
+            // await new Promise(resolve => setTimeout(resolve, 2000))
             
             return data
         },

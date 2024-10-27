@@ -9,6 +9,11 @@ https://www.youtube.com/watch?v=KCcSzv1RmuI
 npx json-server banco.json
 ```
 
+* pagination show com jsonServer rocket
+```
+https://www.youtube.com/watch?v=7zb1-pR3Jxk&t=42s
+```
+
 #### Iniciando paginação
 * url param 
 ``` json-server
