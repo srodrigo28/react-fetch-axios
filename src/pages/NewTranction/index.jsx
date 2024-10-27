@@ -24,7 +24,6 @@ export function NewTranction( { isOpen, setOpen } ) {
         if( description =="" || price == "" || status == "" || inputDate == ""){
             toast("Por favor preencher todos os campos!")
             // console.log( '\n' + description + '\n', price  + '\n', status  + '\n', inputDate  + '\n', category )
-            return false
         }else{
             console.log( '\n', description + '\n', price  + '\n', status  + '\n', inputDate  + '\n', category )
             handleInserir()
@@ -45,18 +44,16 @@ export function NewTranction( { isOpen, setOpen } ) {
               })
             })
             toast('Salvo com sucesso')
+            setCategory(""), setDescription(""), setPrice(""), setStatus(""), setInputDate("")
     }
 
     if (isOpen) {
         return (
             <div className="container">
                 <div className="modal1">
-
                     <form>
                         <button id="fechar" onClick={() => setOpen(!isOpen)} > X </button>
-
                         <h3>Nova transação</h3>
-
                         <input type="text" placeholder="Descricao " value={description} onChange={ e => setDescription( e.target.value )}  />
                         <input  ref={inputRef} className="input" value={price} onChange={ e => setPrice(e.target.value ) }    />
                         <div className="row1">
@@ -91,7 +88,5 @@ export function NewTranction( { isOpen, setOpen } ) {
                     </form>
                 </div>
             </div>
-        )
-    }
-    //else{ return <> </> }
+    )}
 }

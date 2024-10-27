@@ -99,6 +99,14 @@
       "data": "2024-10-31",
       "status": "pago",
       "category": "saida"
+    },
+    {
+      "id": "d8f5",
+      "description": "Serviço Loja Online",
+      "price": "R$ 6.000,00",
+      "data": "2024-10-31",
+      "status": "receber",
+      "category": "entrada"
     }
   ]
 }
