@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.table-container{
+    max-width: 1200px;
+    height: 100vh;
+    margin: auto;
+    color: #fff;
+    background-color: #040a06e2;
+}
+table{
+    width: 100%;
+    border-spacing: .3rem .5rem; /* direita e esquerda 1.5em,  cima e embaixo 1*/
+    
+}
+table thead th {
+    color: #fff;
+    background-color: blueviolet; /* retirar */
+    font-size: 1.3em;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.5em;
+    padding: 1rem 2rem;
+}
+
+table tbody td{
+    border: 0;
+    padding: 1em 2em;
+    color: #000;
+    border-radius: .30em;
+    background-color: #fefefe;
+}
+
+table tbody td:first-child{
+    letter-spacing: 0.2px;
+    font-weight: 600;
+}
+table thead th:nth-last-child(1){
+    width: 50px;
+    background-color: green;
+} 
+table tbody td:nth-last-child(1){
+    color: #fff;
+    background-color: green;
+}
+table tbody tr:hover{
+    border: 1px solid gray;
+}

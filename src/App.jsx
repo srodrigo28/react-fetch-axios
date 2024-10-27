@@ -1,12 +1,14 @@
 
 import './App.css'
-import { Transaction } from "./pages/Transaction"
+// import { Transaction } from "./pages/Transaction"
+import { TransactionsTable } from "./pages/TransactionsTable"
 
 function App() {
 
   return (
    <div>
-      <Transaction />
+      {/* <Transaction /> */}
+      <TransactionsTable />
    </div>
   )
 }
