@@ -24,7 +24,7 @@ export function List1(){
 
     return(
         <div>
-            <h1>Listagem 02</h1>
+            <h1>Listagem 01</h1>
             <h3>Usando Fetch</h3>
 
             <div className="card-body">

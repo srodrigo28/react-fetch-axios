@@ -9,6 +9,23 @@ https://www.youtube.com/watch?v=KCcSzv1RmuI
 npx json-server banco.json
 ```
 
+#### Iniciando paginação
+* url param 
+``` json-server
+api_url/?_page=1&_per_page=2
+```
+
+* outras dependências
+```
+npm i localforage match-sorter sort-by
+```
+
+* url completa
+```
+http://localhost:3000/products/?_page=1&_per_page=2
+
+#### Dependencias gerais
+
 ``` Input mask
 https://www.npmjs.com/package/@react-input/mask
 ```
@@ -20,6 +37,9 @@ https://www.npmjs.com/package/@react-input/number-format
 ``` Alerts
 npm i react-toastify
 ```
+
+* tanstack react query
+npm i @tanstack/react-query
 
 #### Ref.
 
