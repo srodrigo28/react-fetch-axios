@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Toogle 2</title>
+</head>
+<body>
+    
+    <div class="div-group">
+        <h2>Selecionou: <span></span></h2>
+        <button type="button" class="entrada">
+            <i class="item-green fa-regular fa-circle-up"></i>
+        </button>
+        <button type="button" class="saida">
+            <i class="fa-regular fa-circle-down"></i>
+        </button>
+    </div>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body{ 
+            color: #fff;  
+            background-color: #000;
+
+            padding-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        h2{ text-align: center;}
+
+        .saida, .entrada{
+            width: 80px;
+            padding: 12px;
+            width: 50px;
+            margin: 20px;
+            cursor: pointer;
+            border-radius: 10px;
+
+            color: #fff;
+            background-color: #000;
+            border: 1px solid red;
+
+            transition: .9s;
+        }
+
+        i{
+            color: red;
+            font-size: 1.8em;
+        }
+
+        .i-red{
+            color: #fff !important;
+        }
+        .saida:hover, .entrada:hover{
+            transform: scale(1.1);
+        }
+        .active-green{
+            border: 0;
+            color: #fff;
+            background-color: #28a028;
+        }
+        .efeito-arredondar{
+            border-radius: 50%;
+        }
+        .active-red{
+            border: 0;
+            color: #fff;
+            background-color: red;
+        }
+    </style>
+
+    <script>
+        var span = document.querySelector("span")
+        var saida = document.querySelector(".saida")
+        var entrada = document.querySelector(".entrada")
+
+        entrada.onclick = () => {
+            entrada.classList.add("active-green")
+            entrada.classList.add("efeito-arredondar")
+            document.querySelector(".item-green").style.color = "white"
+            document.querySelector(".item-green").style.color = "white"
+            saida.classList.remove("active-red")
+
+            span.textContent = "Entrada"
+        }
+
+        saida.onclick = () => {
+            saida.classList.add("active-red")
+            saida.classList.add("efeito-arredondar")
+            document.querySelector(".saida i").classList.add("i-red")
+            entrada.classList.remove("active-green")
+
+            span.textContent = "Saída"
+        }
+    </script>
+</body>
+</html>

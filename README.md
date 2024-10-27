@@ -23,6 +23,11 @@ npm i react-toastify
 
 #### Ref.
 
+* axios
+```
+npm i axios
+```
+
 * formated
 ```
 https://www.udemy.com/course/react-e-typescript/learn/lecture/21312658#overview
