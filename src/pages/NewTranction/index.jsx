@@ -68,19 +68,17 @@ export function NewTranction( { isOpen, setOpen } ) {
                         </div>
 
                         <div className="btn-group">
-                            <button 
-                                className={` ${ category === "entrada" ? "active-entrada" : "" }  entrada `} 
-                                type="button" onClick={ () => setCategory("entrada") }                                
+                            <button className={` ${ category === "entrada" ? "active-entrada" : "" }  entrada `} 
+                                    type="button" onClick={ () => setCategory("entrada") }                                
                             >
-                                <i className="fa-regular fa-circle-up"></i>
+                            <i className="fa-regular fa-circle-up"></i>
                                 Entrada
                             </button>
 
-                            <button 
-                                className={` ${ category === "saida" ? "active-saida" : ""  }  saida `} 
-                                type="button" onClick={ () => setCategory("saida") }
+                            <button className={` ${ category === "saida" ? "active-saida" : ""  }  saida `} 
+                                    type="button" onClick={ () => setCategory("saida") }
                             >
-                                <i className="fa-regular fa-circle-down"></i>
+                            <i className="fa-regular fa-circle-down"></i>
                                 Saida
                             </button>
                         </div>
