@@ -1,6 +1,6 @@
 import "./List3.css"
 import { Pagination } from "./../Pagination"
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, keepPreviousData } from "@tanstack/react-query";
 import { useSearchParams } from 'react-router-dom'
 
 export function List3(){
@@ -20,8 +20,10 @@ export function List3(){
             const response = await fetch( `http://localhost:3000/transaction/?_page=${page}&_per_page=3`, { method: "GET"} )
             
             const data = await response.json()
+            
             return data
         },
+        placeholderData: keepPreviousData,
     })
 
     if(isLoading){
