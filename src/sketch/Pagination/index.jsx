@@ -1,7 +1,8 @@
 import "./Pagination.css"
+
 import { useSearchParams } from 'react-router-dom'
 
-export function Pagination( { items, page, pages, prev, next } ){
+export function Pagination( { page, pages } ) {
     const [, setSearchParams ] = useSearchParams()
 
     function firsPage() {
@@ -35,12 +36,11 @@ export function Pagination( { items, page, pages, prev, next } ){
             return params
         })
     }
-
     return(
         <div className='pagination-container'>
-            <button disabled={ page - 1 <= 0 }  onClick={ previousPage }> anterior </button>
-            <button> Pág Atual     { page  }  </button>
-            <button disabled={ page + 1 > pages } onClick={nextPage}> próximo  </button>
+            <button disabled={ page - 1 <= 0 }  onClick={ previousPage }> <i class="fa-regular fa-circle-left"></i> </button>
+            <button> Pág  { page  }  </button>
+            <button disabled={ page + 1 > pages } onClick={nextPage}> <i class="fa-regular fa-circle-right"></i>  </button>
         </div>
     )
 }

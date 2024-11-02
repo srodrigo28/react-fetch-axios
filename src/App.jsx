@@ -1,5 +1,5 @@
 import './App.css'
-import { List3 } from './sketch/List3'
+import { List2 } from './sketch/List2'
 // import { Transaction } from "./pages/Transaction"
 // import { TransactionsTable } from "./pages/TransactionsTable"
 
@@ -9,7 +9,7 @@ function App() {
    <div>
       {/* <Transaction /> */}
       {/* <TransactionsTable /> */}
-      <List3 />
+      <List2 />
    </div>
   )
 }
